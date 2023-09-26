@@ -1,0 +1,101 @@
+Sure, I can help you with these Python programs. Here are the solutions to your questions:
+
+**1. Check if a number is a Disarium Number:**
+
+A Disarium number is a number that is equal to the sum of its digits raised to their respective positions.
+
+```python
+def is_disarium_number(n):
+    num_str = str(n)
+    length = len(num_str)
+    digit_sum = sum(int(digit) ** (i + 1) for i, digit in enumerate(num_str))
+    return n == digit_sum
+
+# Test the function
+number = int(input("Enter a number: "))
+if is_disarium_number(number):
+    print(f"{number} is a Disarium number.")
+else:
+    print(f"{number} is not a Disarium number.")
+```
+
+**2. Print all Disarium numbers between 1 and 100:**
+
+```python
+def is_disarium_number(n):
+    num_str = str(n)
+    length = len(num_str)
+    digit_sum = sum(int(digit) ** (i + 1) for i, digit in enumerate(num_str))
+    return n == digit_sum
+
+disarium_numbers = [n for n in range(1, 101) if is_disarium_number(n)]
+print("Disarium numbers between 1 and 100:", disarium_numbers)
+```
+
+**3. Check if a number is a Happy Number:**
+
+A Happy number is a number that eventually reaches 1 when replaced by the sum of the square of each digit in the number.
+
+```python
+def is_happy_number(n):
+    seen = set()
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = sum(int(digit) ** 2 for digit in str(n))
+    return n == 1
+
+# Test the function
+number = int(input("Enter a number: "))
+if is_happy_number(number):
+    print(f"{number} is a Happy number.")
+else:
+    print(f"{number} is not a Happy number.")
+```
+
+**4. Print all Happy numbers between 1 and 100:**
+
+```python
+def is_happy_number(n):
+    seen = set()
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = sum(int(digit) ** 2 for digit in str(n))
+    return n == 1
+
+happy_numbers = [n for n in range(1, 101) if is_happy_number(n)]
+print("Happy numbers between 1 and 100:", happy_numbers)
+```
+
+**5. Check if a number is a Harshad Number:**
+
+A Harshad number is a number that is divisible by the sum of its digits.
+
+```python
+def is_harshad_number(n):
+    digit_sum = sum(int(digit) for digit in str(n))
+    return n % digit_sum == 0
+
+# Test the function
+number = int(input("Enter a number: "))
+if is_harshad_number(number):
+    print(f"{number} is a Harshad number.")
+else:
+    print(f"{number} is not a Harshad number.")
+```
+
+**6. Print all Pronic numbers between 1 and 100:**
+
+A pronic number, also known as a rectangular number, is the product of two consecutive integers.
+
+```python
+def is_pronic_number(n):
+    for i in range(1, int(n**0.5) + 1):
+        if i * (i + 1) == n:
+            return True
+    return False
+
+pronic_numbers = [n for n in range(1, 101) if is_pronic_number(n)]
+print("Pronic numbers between 1 and 100:", pronic_numbers)
+```
+
+These Python programs should help you with the tasks you mentioned. Just copy and paste the code into your Python environment and run it.
